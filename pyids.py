@@ -72,7 +72,7 @@ class PYIDS:
 
         return: ip and the mac address of the gateway
         """
-        with os.popen('c:\\windows\\system32\\arp -a') as f:
+        with os.popen('arp -a') as f:
             data = f.read()
         line = re.findall('([-.0-9]+)\s+([-0-9a-f]{17})\s+(\w+)',data)
         ip_gateway = line[0][0]
