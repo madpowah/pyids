@@ -56,9 +56,7 @@ class PYIDS:
                 
                 ports = ''
                 for l in list_port:
-                    if str(l[3][1]) != ' ':
-                        ports = ports + ' ' + str(l[3][1])
-                
+                    ports = ports + ' ' + str(l[3][1])
                 
                 self.alert = '/!\ New port open : ' + ports
                 return 1
